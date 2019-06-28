@@ -1,6 +1,6 @@
 class HomeController {
   static renderHomePage(req, res, next) {
-    res.render("posts");
+    res.redirect("/posts");
   }
 }
 
