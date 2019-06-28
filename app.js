@@ -12,6 +12,8 @@ var authorRouter = require("./src/server/routes/author-router");
 
 var app = express();
 
+require("./src/server/modules/db");
+
 // view engine setup
 app.set("views", path.join(__dirname, "./src/server/views"));
 app.set("view engine", "hbs");
@@ -20,9 +22,9 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src/public")));
 
-//Router
+//Routes
 app.use("/", homeRouter);
 app.use("/posts", postsRouter);
 app.use("/categories", categoryRouter);

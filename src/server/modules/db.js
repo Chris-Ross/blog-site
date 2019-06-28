@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Book = require("./books/book");
+const Post = require("./blog-posts/post");
 
 const { username, password } = require("../config/dbConnect");
 
@@ -11,6 +11,6 @@ mongoose.connect(dbConnection, { useNewUrlParser: true });
 const db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function () {
-    console.log("Connected to the DB!");
+db.once("open", function() {
+  console.log("Connected to the DB!");
 });

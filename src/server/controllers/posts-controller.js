@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const Post = require("../modules/blog-posts/post");
-const Category = require("../models/category/category");
-const Tag = require("../models/tag/tag");
+const Category = require("../modules/category/category");
+const Tag = require("../modules/tags/tag");
 const Author = require("../modules/author/author");
 
 class PostsController {
@@ -68,4 +68,4 @@ class PostsController {
   }
 }
 
-module.exports = PostController;
+module.exports = PostsController;
