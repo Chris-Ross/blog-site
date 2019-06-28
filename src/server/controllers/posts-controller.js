@@ -25,7 +25,7 @@ class PostsController {
 
   static addPost(req, res, next) {
     const title = req.body.title;
-    const body = req.body.content;
+    const body = req.body.body;
     const categoryId = req.body.category;
     const authorId = req.body.author;
     const tags = req.body.tag;
@@ -38,7 +38,7 @@ class PostsController {
     Tag.find({ _id: tags }, (err, tags) => {
       Author.findById(authorId, (err, author) => {
         postToAdd.authors.push(author);
-        author.post.push(postToAdd);
+        author.posts.push(postToAdd);
         Category.findById(categoryId, (err, category) => {
           postToAdd.categories.push(category);
           category.posts.push(postToAdd);

@@ -1,4 +1,8 @@
 <main>
-    {{#each}}
+    <form action="/categories/add" method="POST">
+        <label><input type="text" name="category" placeholder="Category"></label>
+            <button> New Category </button>
+    </form>
+    {{#each categories}}
     {{/each}}
 </main>

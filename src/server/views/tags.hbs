@@ -1,4 +1,8 @@
 <main>
-    {{#each}}
+    <form action="/tags/add" method="POST">
+        <label><input type="text" name="tag" placeholder="Tags"></label>
+            <button> New Tag </button>
+    </form>
+    {{#each tags}}
     {{/each}}
 </main>

@@ -1,5 +1,30 @@
 <main>
+    <form action="/posts/add" method="POST">
+        <label> Title </label><input maxlength="20" type="text" name="title" />
+        <label> Author </label><input maxlength="20" type="text" name="author" />
+        <label></label>Category </label><select name="category">
+            {{#each categories}}
+            <option value="{{id}}">{{category}}</option>
+            {{/each}}
+        </select>
+        <label> Body </label><input type="text" name="body" />
+        <fieldset>
+            <legend>Tags</legend>
+            {{#each tags}}
+            <label><input class="none" type="checkbox" name="tag" value="{{id}}"> {{name}}</label>
+            {{/each}}
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
     <ul>
-
+        {{#each posts}}
+        <li>
+            <a href="/posts/{{id}}">
+                <figure>
+                    <img src="{{image}}" alt="{{title}}">
+                </figure>
+            </a>
+        </li>
+        {{/each}}
     </ul>
 </main>
