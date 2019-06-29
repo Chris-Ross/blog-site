@@ -1,3 +1,10 @@
 <main>
-
+    <section>
+        <h1{{tag.tag}}</h1> <ul class="list">
+            {{#each tag.posts}}
+            <li href="/reviews/{{_id}}"> {{title}}
+            </li>
+            {{/each}}
+            </ul>
+    </section>
 </main>

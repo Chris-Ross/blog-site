@@ -1,3 +1,10 @@
 <main>
-
+    <section>
+        <h1>{{category.category}}</h1>
+        <ul>
+            {{#each categoty.posts}}
+            <li href="/posts/{{_id}}">{{title}}</li>
+            {{/each}}
+        </ul>
+    </section>
 </main>

@@ -1,3 +1,12 @@
 <main>
-    
+    <section>
+        <h1>{{author.author}}</h1>
+        <ul>
+
+            {{#each author.posts}}
+            <li href="/posts/{{_id}}">{{title}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
 </main>

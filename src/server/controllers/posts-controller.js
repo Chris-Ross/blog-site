@@ -23,23 +23,69 @@ class PostsController {
     res.render("post", { post });
   }
 
+  // static addPost(req, res, next) {
+  //   const title = req.body.title;
+  //   const body = req.body.body;
+  //   const categoryId = req.body.categoryId;
+  //   const authorId = req.body.author;
+  //   const tag = req.body.tag;
+
+  //   const postToAdd = new Post({
+  //     title,
+  //     body,
+  //     tag
+  //   });
+
+  //   Category.findById(categoryId, (err, category) => {
+  //     Tag.findById(tag, (err, tag) => {
+  //       Author.findById(authorId, (err, author) => {
+  //         postToAdd.categories.push(category);
+  //         category.posts.push(postToAdd);
+  //         postToAdd.authors.push(author);
+  //         author.posts.push(postToAdd);
+  //         tag.posts.push(postToAdd);
+  //         postToAdd.tags.push(tag);
+
+  //         category.save((err, category) => {
+  //           if (err) return console.error(err);
+  //         });
+
+  //         author.save((err, author) => {
+  //           if (err) return console.error(err);
+  //         });
+
+  //         tag.save((err, tag) => {
+  //           if (err) return console.error(err);
+  //         });
+
+  //         postToAdd.save((err, postToAdd) => {
+  //           if (err) return console.error(err);
+  //           res.redirect("/posts");
+  //         });
+  //       });
+  //     });
+  //   });
+  // }
+
   static addPost(req, res, next) {
     const title = req.body.title;
     const body = req.body.body;
     const categoryId = req.body.category;
     const authorId = req.body.author;
+    const imageUrl = req.body.imageUrl;
     const tags = req.body.tag;
 
     const postToAdd = new Post({
       title,
+      imageUrl,
       body
     });
 
     Tag.find({ _id: tags }, (err, tags) => {
       Author.findById(authorId, (err, author) => {
-        postToAdd.authors.push(author);
-        author.posts.push(postToAdd);
         Category.findById(categoryId, (err, category) => {
+          postToAdd.authors.push(author);
+          author.posts.push(postToAdd);
           postToAdd.categories.push(category);
           category.posts.push(postToAdd);
           tags.forEach(tag => {
