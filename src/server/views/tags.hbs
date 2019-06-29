@@ -3,6 +3,11 @@
         <label><input type="text" name="tag" placeholder="Tags"></label>
             <button> New Tag </button>
     </form>
-    {{#each tags}}
-    {{/each}}
+    <ul>
+        {{#each tags}}
+        <li>
+            <a href="/tags/{{id}}"><div>{{tag}}</div></a>
+        </li>
+        {{/each}}
+    </ul>
 </main>

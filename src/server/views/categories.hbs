@@ -1,8 +1,15 @@
 <main>
     <form action="/categories/add" method="POST">
         <label><input type="text" name="category" placeholder="Category"></label>
-            <button> New Category </button>
+        <button> New Category </button>
     </form>
-    {{#each categories}}
-    {{/each}}
+    <ul>
+        {{#each categories}}
+        <li>
+            <a href="/categories/{{id}}">
+                <div>{{category}}</div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
 </main>

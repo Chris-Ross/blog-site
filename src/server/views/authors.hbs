@@ -1,4 +1,15 @@
 <main>
-    {{#each}}
-    {{/each}}
+    <form action="/authors/add" method="POST">
+        <label><input type="text" name="tag" placeholder="author"></label>
+        <button> New Author </button>
+    </form>
+    <ul>
+        {{#each authors}}
+        <li>
+            <a href="/authors/{{id}}">
+                <div>{{name}}</div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
 </main>
