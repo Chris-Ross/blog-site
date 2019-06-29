@@ -1,9 +1,18 @@
 <main>
     <section>
-        <h1>{{posts.title}}</h1>
-        <figure><img src="{{posts.imageUrl}}" alt="{{title}}"></figure>
+        <h3>{{post.title}}</h3>
+        {{#each post.authors}}
+        Author: <br> <a href="/authors/{{id}}">{{author}}</a>
+        {{/each}}
+        <figure><img src="{{post.imageUrl}}" alt="Blog Post"></figure>
     </section>
     <ul>
-
+        <li> Body: {{post.body}}</li>
+        {{#each post.categories}}
+        <li> Category: <a href="/categories/{{id}}">{{category}}</a></li>
+        {{/each}}
+        {{#each post.tags}}
+        <li> Tag: <a href="/tags/{{id}}">{{tag}}</a></li>
+        {{/each}}
     </ul>
 </main>

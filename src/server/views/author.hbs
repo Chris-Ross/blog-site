@@ -1,11 +1,13 @@
 <main>
     <section>
-        <h1>{{author.author}}</h1>
+        <h1>{{author.name}}</h1>
         <ul>
-
             {{#each author.posts}}
-            <li href="/posts/{{_id}}">{{title}}
-            </li>
+            <a href="/posts/{{_id}}">
+                <li>{{title}}</li>
+                <<img src="{{imageUrl}}" alt="Blog Picture">
+                    </li>
+            </a>
             {{/each}}
         </ul>
     </section>

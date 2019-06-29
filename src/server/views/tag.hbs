@@ -1,10 +1,13 @@
 <main>
     <section>
-        <h1{{tag.tag}}</h1> <ul class="list">
+        <h1>{{tag.tag}}</h1>
+        <ul>
             {{#each tag.posts}}
-            <li href="/reviews/{{_id}}"> {{title}}
-            </li>
+            <a href="/posts/{{_id}}">
+                <li>{{title}}</li>
+                <li><img src="{{imageUrl}}" alt="Blog Picture"></li>
+            </a>
             {{/each}}
-            </ul>
+        </ul>
     </section>
 </main>

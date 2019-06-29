@@ -2,8 +2,11 @@
     <section>
         <h1>{{category.category}}</h1>
         <ul>
-            {{#each categoty.posts}}
-            <li href="/posts/{{_id}}">{{title}}</li>
+            {{#each category.posts}}
+            <a href="/posts/{{_id}}">
+                <li>{{title}}</li>
+                <li><img src="{{imageUrl}}" alt="Blog Picture"></li>
+            </a>
             {{/each}}
         </ul>
     </section>
