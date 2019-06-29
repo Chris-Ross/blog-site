@@ -23,13 +23,11 @@
    </form>
 
    {{#each posts}}
-   <ul>
-      <li>Title : {{title}}</li>
-      <li><img src="{{imageUrl}}"
-            onerror="https://afrobarometer.org/sites/default/files/default_images/afrobarometer-default-graphic-blog-thumbnai_brown_02l.jpg"
-            alt="Blog Picture">
-      </li>
+   <ul><a href="/posts/{{id}}">
+         <li>Title : {{title}}</li>
+         <li><img src="{{imageUrl}}" alt="Blog Picture"></li>
+      </a>
       <li>Body: {{body}}</li>
-      {{/each}}
    </ul>
+   {{/each}}
 </main>
