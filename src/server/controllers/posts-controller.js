@@ -58,7 +58,7 @@ class PostsController {
             if (err) return console.error(err);
           });
 
-          reviewToAdd.save((error, reviewToAdd) => {
+          postToAdd.save((error, reviewToAdd) => {
             if (error) return console.error(error);
             res.redirect("/posts");
           });

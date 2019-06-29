@@ -1,7 +1,11 @@
 <main>
    <form action="/posts/add" method="POST">
       <label> Title </label><input maxlength="20" type="text" name="title" />
-      <label> Author </label><input maxlength="20" type="text" name="author" />
+      <label></label>Author </label><select name="author">
+         {{#each authors}}
+         <option value="{{id}}">{{author}}</option>
+         {{/each}}
+      </select>
       <label></label>Category </label><select name="category">
          {{#each categories}}
          <option value="{{id}}">{{category}}</option>
@@ -11,18 +15,22 @@
       <fieldset>
          <legend>Tags</legend>
          {{#each tags}}
-         <label><input type="checkbox" name="tag" value="{{id}}"> {{name}} </label>
+         <label><input type="checkbox" name="tag" value="{{id}}"> {{tag}} </label>
          {{/each}}
       </fieldset>
       <button type="submit">Submit</button>
    </form>
    <ul>
       {{#each posts}}
-      <li>
-         <a>
-
-         </a>
-      </li>
+            <figure>
+               <ul>
+                  <li> Title: {{title}}</li>
+                  <li> Author: {{author}}</li>
+                  <li> Category: {{category}}</li>
+                  <li> Body: {{body}}</li>
+                  <li> Tag: {{tag}}</li>
+               </ul>
+            </figure>
       {{/each}}
    </ul>
 </main>

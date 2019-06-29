@@ -19,7 +19,7 @@ class AuthorController {
   }
 
   static addAuthor(req, res, next) {
-    const author = req.body.category;
+    const author = req.body.author;
 
     const authorToAdd = new Author({
       author

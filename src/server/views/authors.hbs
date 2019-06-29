@@ -1,13 +1,13 @@
 <main>
     <form action="/authors/add" method="POST">
-        <label><input type="text" name="tag" placeholder="author"></label>
+        <label><input type="text" name="author" placeholder="author"></label>
         <button> New Author </button>
     </form>
     <ul>
         {{#each authors}}
         <li>
             <a href="/authors/{{id}}">
-                <div>{{name}}</div>
+                <div>{{author}}</div>
             </a>
         </li>
         {{/each}}
