@@ -19,6 +19,10 @@ a {
   color: #00b7ff;
 }
 
+a:hover {
+  color: var(--gray);
+}
+
 ul {
   list-style: none;
   background: transparent;
@@ -78,4 +82,44 @@ h2 {
   background-color: transparent;
   margin-bottom: 3rem;
   -webkit-text-stroke: 1px var(--dark-gray);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+.posts-image {
+  max-width: 25vw;
+  max-height: 25vh;
+}
+
+/* Section for universal CSS of Categories, Authors and Tags (CAT) */
+
+.CAT-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--gray);
+  border: 1rem solid var(--black);
+}
+
+.CAT-display {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+.CAT-list-style {
+  border: 2px solid var(--blue);
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+.CAT-list-item {
+  font-size: 1.5rem;
 }

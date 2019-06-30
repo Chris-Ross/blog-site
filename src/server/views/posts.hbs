@@ -24,13 +24,14 @@
          <button type="submit">Submit</button>
       </form>
    </div>
-
-   {{#each posts}}
-   <ul><a href="/posts/{{id}}">
-         <li>Title : {{title}}</li>
-         <img src="{{imageUrl}}" alt="Blog Picture">
-      </a>
-      <li>Body: {{body}}</li>
-   </ul>
-   {{/each}}
+   <section class="posts-grid">
+      {{#each posts}}
+      <ul class="posts-container"><a href="/posts/{{id}}">
+            <li>Title : {{title}}</li>
+            <img src="{{imageUrl}}" alt="Blog Picture" class="posts-image">
+         </a>
+         <li>Body: {{body}}</li>
+      </ul>
+      {{/each}}
+   </section>
 </main>
