@@ -1,15 +1,19 @@
 <main>
-    <form action="/categories/add" method="POST">
-        <label><input type="text" name="category" placeholder="Category"></label>
-        <button> New Category </button>
-    </form>
+    <div class="hero-image">
+        <form action="/categories/add" method="POST" class="CAT-form">
+            <label><input type="text" name="category" placeholder="Category"></label>
+            <button> New Category </button>
+        </form>
+    </div>
     <ul>
-        {{#each categories}}
-        <li>
-            <a href="/categories/{{id}}">
-                <div>{{category}}</div>
-            </a>
-        </li>
-        {{/each}}
+        <div class="CAT-display">
+            {{#each categories}}
+            <li class="CAT-list-style">
+                <a href="/categories/{{id}}">
+                    <div class="CAT-list-item">{{category}}</div>
+                </a>
+            </li>
+            {{/each}}
+        </div>
     </ul>
 </main>

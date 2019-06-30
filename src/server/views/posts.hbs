@@ -1,33 +1,37 @@
 <main>
-   <form action="/posts/add" method="POST">
-      <label> Title </label><input maxlength="20" type="text" name="title" />
-      <label> Image Url </label><input type="text" name="imageUrl">
-      <label> Author </label><select name="author">
-         {{#each authors}}
-         <option value="{{id}}">{{author}}</option>
-         {{/each}}
-      </select>
-      <label> Category </label><select name="category">
-         {{#each categories}}
-         <option value="{{id}}">{{category}}</option>
-         {{/each}}
-      </select>
-      <label> Body </label><input type="text" name="body" />
-      <fieldset>
-         <legend>Tags</legend>
-         {{#each tags}}
-         <label><input type="checkbox" name="tag" value="{{id}}"> {{tag}} </label>
-         {{/each}}
-      </fieldset>
-      <button type="submit">Submit</button>
-   </form>
-
-   {{#each posts}}
-   <ul><a href="/posts/{{id}}">
-         <li>Title : {{title}}</li>
-         <img src="{{imageUrl}}" alt="Blog Picture">
-      </a>
-      <li>Body: {{body}}</li>
-   </ul>
-   {{/each}}
+   <div class="hero-image">
+      <h2>Got an opinion? Why not share it! <br> Just use the form below, and you'll be good to go!</h2>
+      <form action="/posts/add" method="POST" class="post-form">
+         <label> Title </label><input maxlength="20" type="text" name="title" />
+         <label> Image Url </label><input type="text" name="imageUrl">
+         <label> Author </label><select name="author">
+            {{#each authors}}
+            <option value="{{id}}">{{author}}</option>
+            {{/each}}
+         </select>
+         <label> Category </label><select name="category">
+            {{#each categories}}
+            <option value="{{id}}">{{category}}</option>
+            {{/each}}
+         </select>
+         <label> Body </label><input type="text" name="body" />
+         <fieldset>
+            <legend>Tags</legend>
+            {{#each tags}}
+            <label><input type="checkbox" name="tag" value="{{id}}"> {{tag}} </label>
+            {{/each}}
+         </fieldset>
+         <button type="submit">Submit</button>
+      </form>
+   </div>
+   <section class="posts-grid">
+      {{#each posts}}
+      <ul class="posts-container"><a href="/posts/{{id}}">
+            <li>Title : {{title}}</li>
+            <img src="{{imageUrl}}" alt="Blog Picture" class="posts-image">
+         </a>
+         <li>Body: {{body}}</li>
+      </ul>
+      {{/each}}
+   </section>
 </main>

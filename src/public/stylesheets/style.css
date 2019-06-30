@@ -1,8 +1,221 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --white: #f2f5ea;
+  --black: #000500;
+  --blue: #4392f1;
+  --gray: #92817a;
+  --dark-gray: #2c363f;
+}
+
+* {
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 0 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  background-color: var(--white);
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: #00b7ff;
+}
+
+a:hover {
+  color: var(--gray);
+}
+
+ul {
+  list-style: none;
+  background: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  background: transparent;
+}
+
+.hero-image {
+  background-image: url(../images/blog-hero-image.png);
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.post-form {
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  border: 1rem solid var(--black);
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--gray);
+  background-color: transparent;
+  margin-bottom: 3rem;
+  -webkit-text-stroke: 1px var(--dark-gray);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+.posts-image {
+  max-width: 25vw;
+  max-height: 25vh;
+}
+
+/* Navigation Bar*/
+
+.dropbtn {
+  background-color: #4caf50;
+  box-shadow: 8px 0px 8px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 16px 8px 0px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* Section for universal CSS of Categories, Authors and Tags (CAT) */
+
+.CAT-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  background-color: var(--gray);
+  border: 1rem solid var(--black);
+}
+
+.CAT-display {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+.CAT-list-style {
+  border: 2px solid var(--blue);
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+.CAT-list-item {
+  font-size: 1.5rem;
+}
+
+/* CSS for indivudual rendered pages */
+
+.CAT-s-h1 {
+  text-align: center;
+  color: var(--dark-gray);
+  -webkit-text-stroke: 1px var(--white);
+  font-size: 3rem;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--blue);
+}
+
+.CAT-s-img {
+  max-height: 25vh;
+  max-width: 25vw;
+}
+
+.CAT-s-grid {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* CSS for individual post */
+
+.post-section {
+  text-align: center;
+}
+
+.post-section__image {
+  max-height: 45vh;
+  max-width: 45vw;
+}
+
+.post-section__author {
+  font-size: 3rem;
+}
+
+.post-section__flex {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.post-section__body {
+  margin: 1rem 1rem;
+}
+
+.post-section__CAT {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }

@@ -1,13 +1,21 @@
 <main>
-    <form action="/tags/add" method="POST">
-        <label><input type="text" name="tag" placeholder="Tags"></label>
+    <div class="hero-image">
+
+        <form action="/tags/add" method="POST" class="CAT-form">
+            <label><input type="text" name="tag" placeholder="Tags"></label>
             <button> New Tag </button>
-    </form>
+        </form>
+    </div>
     <ul>
-        {{#each tags}}
-        <li>
-            <a href="/tags/{{id}}"><div>{{tag}}</div></a>
-        </li>
-        {{/each}}
+        <div class="CAT-display">
+
+            {{#each tags}}
+            <li class="CAT-list-style">
+                <a href="/tags/{{id}}">
+                    <div class="CAT-list-item">{{tag}}</div>
+                </a>
+            </li>
+            {{/each}}
+        </div>
     </ul>
 </main>
