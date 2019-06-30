@@ -66,6 +66,7 @@ h1 {
   display: flex;
   flex-direction: column;
   border: 1rem solid var(--black);
+  max-width: 25rem;
 }
 
 label {
