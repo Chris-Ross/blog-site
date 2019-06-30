@@ -1,9 +1,18 @@
+:root {
+  --white: #f2f5ea;
+  --black: #000500;
+  --blue: #4392f1;
+  --gray: #92817a;
+  --dark-gray: #2c363f;
+}
+
 * {
   font-size: 20px;
   box-sizing: border-box;
   padding: 0 0;
   margin: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-color: var(--white);
 }
 
 a {
@@ -18,6 +27,9 @@ header {
   display: flex;
   justify-content: space-between;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  background: transparent;
 }
 
 footer {
@@ -28,6 +40,11 @@ footer {
 
 h1 {
   font-size: 2rem;
+  background: transparent;
+}
+
+nav {
+  background: transparent;
 }
 
 .hero-image {
@@ -36,17 +53,27 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
   margin: 0 auto;
 }
 
 .post-form {
   text-align: center;
   margin: 0 auto;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  border: 1rem solid var(--black);
+}
+
+label {
+  font-size: 1.2rem;
 }
 
 h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: ;
+  color: var(--gray);
+  background-color: transparent;
+  margin-bottom: 3rem;
 }
