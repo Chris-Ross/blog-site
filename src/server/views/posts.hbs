@@ -1,26 +1,28 @@
 <main>
-   <form action="/posts/add" method="POST">
-      <label> Title </label><input maxlength="20" type="text" name="title" />
-      <label> Image Url </label><input type="text" name="imageUrl">
-      <label> Author </label><select name="author">
-         {{#each authors}}
-         <option value="{{id}}">{{author}}</option>
-         {{/each}}
-      </select>
-      <label> Category </label><select name="category">
-         {{#each categories}}
-         <option value="{{id}}">{{category}}</option>
-         {{/each}}
-      </select>
-      <label> Body </label><input type="text" name="body" />
-      <fieldset>
-         <legend>Tags</legend>
-         {{#each tags}}
-         <label><input type="checkbox" name="tag" value="{{id}}"> {{tag}} </label>
-         {{/each}}
-      </fieldset>
-      <button type="submit">Submit</button>
-   </form>
+   <div class="hero-image">
+      <form action="/posts/add" method="POST">
+         <label> Title </label><input maxlength="20" type="text" name="title" />
+         <label> Image Url </label><input type="text" name="imageUrl">
+         <label> Author </label><select name="author">
+            {{#each authors}}
+            <option value="{{id}}">{{author}}</option>
+            {{/each}}
+         </select>
+         <label> Category </label><select name="category">
+            {{#each categories}}
+            <option value="{{id}}">{{category}}</option>
+            {{/each}}
+         </select>
+         <label> Body </label><input type="text" name="body" />
+         <fieldset>
+            <legend>Tags</legend>
+            {{#each tags}}
+            <label><input type="checkbox" name="tag" value="{{id}}"> {{tag}} </label>
+            {{/each}}
+         </fieldset>
+         <button type="submit">Submit</button>
+      </form>
+   </div>
 
    {{#each posts}}
    <ul><a href="/posts/{{id}}">
