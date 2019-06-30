@@ -1,0 +1,19 @@
+<main>
+    <div class="hero-image">
+        <form action="/categories/add" method="POST" class="CAT-form">
+            <label><input type="text" name="category" placeholder="Category"></label>
+            <button> New Category </button>
+        </form>
+    </div>
+    <ul>
+        <div class="CAT-display">
+            {{#each categories}}
+            <li class="CAT-list-style">
+                <a href="/categories/{{id}}">
+                    <div class="CAT-list-item">{{category}}</div>
+                </a>
+            </li>
+            {{/each}}
+        </div>
+    </ul>
+</main>

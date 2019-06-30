@@ -1,0 +1,21 @@
+<main>
+    <div class="hero-image">
+
+        <form action="/authors/add" method="POST" class="CAT-form">
+            <label><input type=" text" name="author" placeholder="author"></label>
+            <button> New Author </button>
+        </form>
+    </div>
+    <ul>
+        <div class="CAT-display">
+
+            {{#each authors}}
+            <li class="CAT-list-style">
+                <a href="/authors/{{id}}">
+                    <div class="CAT-list-item">{{author}}</div>
+                </a>
+            </li>
+            {{/each}}
+        </div>
+    </ul>
+</main>

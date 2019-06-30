@@ -1,0 +1,17 @@
+<main>
+    <section>
+        <div class="hero-image">
+            <h1 class="CAT-s-h1">{{author.author}}</h1>
+        </div>
+        <section class="CAT-s-grid">
+            {{#each author.posts}}
+            <ul><a href="/posts/{{id}}">
+                    <li>Title : {{title}}</li>
+                    <img src="{{imageUrl}}" alt="Blog Picture" class="CAT-s-img">
+                </a>
+                <li>Body: {{body}}</li>
+            </ul>
+            {{/each}}
+        </section>
+    </section>
+</main>
