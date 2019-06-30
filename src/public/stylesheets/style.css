@@ -21,6 +21,7 @@ a {
 
 ul {
   list-style: none;
+  background: transparent;
 }
 
 header {
@@ -43,7 +44,7 @@ h1 {
   background: transparent;
 }
 
-nav {
+.navigation {
   background: transparent;
 }
 
@@ -76,4 +77,5 @@ h2 {
   color: var(--gray);
   background-color: transparent;
   margin-bottom: 3rem;
+  -webkit-text-stroke: 1px var(--dark-gray);
 }
