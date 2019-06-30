@@ -16,6 +16,7 @@
 }
 
 a {
+  text-decoration: none;
   color: #00b7ff;
 }
 
@@ -49,8 +50,14 @@ h1 {
 }
 
 .navigation {
-  background: transparent;
+  /* background: transparent; */
 }
+
+/* .nav-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  text-decoration: none;
+} */
 
 .hero-image {
   background-image: url(../images/blog-hero-image.png);
@@ -122,4 +129,57 @@ h2 {
 
 .CAT-list-item {
   font-size: 1.5rem;
+}
+
+/* CSS for indivudual rendered pages */
+
+.CAT-s-h1 {
+  text-align: center;
+  color: var(--dark-gray);
+  -webkit-text-stroke: 1px var(--white);
+  font-size: 3rem;
+  margin: 0 auto;
+  border-bottom: 2px solid var(--blue);
+}
+
+.CAT-s-img {
+  max-height: 25vh;
+  max-width: 25vw;
+}
+
+.CAT-s-grid {
+  display: grid;
+  grid-template-columns: 33% auto 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* CSS for individual post */
+
+.post-section {
+  text-align: center;
+}
+
+.post-section__image {
+  max-height: 45vh;
+  max-width: 45vw;
+}
+
+.post-section__author {
+  font-size: 3rem;
+}
+
+.post-section__flex {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.post-section__body {
+  margin: 1rem 1rem;
+}
+
+.post-section__CAT {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }
