@@ -31,5 +31,22 @@ h1 {
 }
 
 .hero-image {
-  background-image: url(/src/public/images/blog-hero-image.png);
+  background-image: url(../images/blog-hero-image.png);
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+.post-form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: ;
 }
